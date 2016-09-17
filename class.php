@@ -22,7 +22,7 @@ class plants extends Nature {
     $this->setType($plant_type);
   }
 
-  function grow(){
+  private function grow(){
     echo $this->plant_name . " is growing";
   }
 
@@ -34,7 +34,7 @@ class animals extends Nature {
     $this->setType($animal_type);
   }
 
-  function feed(){
+  protected function feed(){
     echo $this->animal_name . " is feeding";
   }
 
