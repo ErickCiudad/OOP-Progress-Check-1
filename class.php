@@ -1,5 +1,5 @@
 <?php
-class Nature{
+abstract class Nature{
 
   var $type;
   var $plant_type;
@@ -16,6 +16,7 @@ class Nature{
 
 }
 
+class people extends Nature{}
 
 class plants extends Nature {
   function __construct($plant_type){
@@ -40,6 +41,11 @@ class animals extends Nature {
 
 }
 
+static $earth = "world";
+
+class fish extends animals {
+
+}
 
 
  ?>

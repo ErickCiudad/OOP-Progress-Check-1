@@ -9,9 +9,23 @@
 
   </body>
   <?php
+  ///////////////AUTOLOAD///////////////
+  spl_autoload_register(function($class_name){
+    include $class_name . '.php';
+  });
 
-$man = new Nature();
-$woman = new Nature();
+  $foo = new foo;
+  $bar = new bar;
+
+  // $bar->firstSin();
+  ///YOU CAN'T EXTEND A FINAL FUNCTION
+  //UNCOMMENT $bar->sayHello(); & LINES 3-5 ON BAR.PHP TO GET AN ERROR
+  //HI MR. CLAWSON!
+  ///////////////AUTOLOAD///////////////
+
+//you can't instatiate an abstract class
+$man = new people();
+$woman = new people();
 
 $man->setType("Adam");
 $woman->setType("Eve");
@@ -48,6 +62,8 @@ $bird = new animals("mos");
 echo $bird->getType() . 's'  . '.' . '<br />' ;
 
 echo '<hr />';///
+
+echo "And they all live in this " . $earth . '<br />';
 
    ?>
 </html>
